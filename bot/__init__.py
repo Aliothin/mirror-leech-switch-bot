@@ -66,6 +66,7 @@ queued_up = {}
 non_queued_dl = set()
 non_queued_up = set()
 multi_tags = set()
+user = None
 
 try:
     if bool(environ.get("_____REMOVE_THIS_LINE_____")):
