@@ -218,6 +218,7 @@ class SwUploader:
         )
         buttons = ButtonMaker()
         LOGGER.info(f"Sent MSG: {self._sent_msg}")
+        LOGGER.info(f"Media Link: {self._sent_msg.media_link}")
         buttons.ubutton("Direct Download Link", self._sent_msg.media_link)
         button = buttons.build_menu()
         self._sent_msg = await editMessage(
