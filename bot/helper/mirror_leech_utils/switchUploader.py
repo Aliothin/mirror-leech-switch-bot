@@ -217,6 +217,7 @@ class SwUploader:
             media_type=7 if self._listener.asDoc else None,
         )
         buttons = ButtonMaker()
+        LOGGER.info(f"Sent MSG: {self._sent_msg}")
         buttons.ubutton("Direct Download Link", self._sent_msg.media_link)
         button = buttons.build_menu()
         self._sent_msg = await editMessage(
